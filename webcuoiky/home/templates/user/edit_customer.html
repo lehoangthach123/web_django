@@ -1,0 +1,18 @@
+{% extends "user/base.html" %}
+
+{% block cartegory %}
+<!-- section -->
+<div class="form-login">
+    <div class="cover">
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <br>
+            <button type="submit">Save</button>
+          </form>
+    </div>
+    
+</div>
+{% endblock  %}

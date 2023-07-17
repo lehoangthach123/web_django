@@ -1,0 +1,37 @@
+{% extends "user/base.html" %}
+
+{% block cartegory %}
+    <!-- section -->
+    <div class="form-reg">
+        <div class="cover">
+            <h1 class="form-login-heading">ĐĂNG KÝ</h1>
+            <form method="post" class="form-login-form">
+{% comment %} 
+                <label for="name">Họ và tên</label><br>
+                <input type="text" id="name" placeholder="Nhập Họ & Tên"><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" placeholder="Nhập Email"><br>
+                <label for="password">Mật Khẩu</label><br>
+                <input type="password" id="password" placeholder="Nhập Password"><br>
+                <label for="password1">Xác Nhận Mật Khẩu</label><br>
+                <input type="password" id="password1" placeholder="Xác Nhận Password"><br>
+                <label for="birth">Ngày sinh</label><br>
+                <input type="date" id="birth"><br>
+                <label for="">Giới Tính:</label><br>
+                <label for="male">Nam</label>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="female">Nữ</label>
+                <input type="radio" name="gender" value="female" id="female"><br><br>
+                <button>Đăng kí</button> {% endcomment %}
+
+
+                {% csrf_token %}
+                <table>
+                {{forms.as_table}}
+                </table>
+                <button type="submit">Đăng kí</button>
+
+            </form>
+        </div>
+    </div>
+{% endblock  %}
